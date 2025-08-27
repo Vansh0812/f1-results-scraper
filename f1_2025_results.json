@@ -1,0 +1,93 @@
+{
+  "scraping_metadata": {
+    "scraped_at": "2025-08-27T16:15:14.768486",
+    "source_url": "https://www.formula1.com/en/results/2025/races",
+    "total_races": 14
+  },
+  "results": [
+    {
+      "date": "16 Mar",
+      "grand_prix": "Flag of AustraliaAustralia",
+      "winner": "LandoNorrisNOR",
+      "scraped_at": "2025-08-27T16:15:14.763865"
+    },
+    {
+      "date": "23 Mar",
+      "grand_prix": "Flag of People’s Republic of ChinaChina",
+      "winner": "OscarPiastriPIA",
+      "scraped_at": "2025-08-27T16:15:14.764304"
+    },
+    {
+      "date": "06 Apr",
+      "grand_prix": "Flag of JapanJapan",
+      "winner": "MaxVerstappenVER",
+      "scraped_at": "2025-08-27T16:15:14.764816"
+    },
+    {
+      "date": "13 Apr",
+      "grand_prix": "Flag of BahrainBahrain",
+      "winner": "OscarPiastriPIA",
+      "scraped_at": "2025-08-27T16:15:14.765083"
+    },
+    {
+      "date": "20 Apr",
+      "grand_prix": "Flag of Saudi ArabiaSaudi Arabia",
+      "winner": "OscarPiastriPIA",
+      "scraped_at": "2025-08-27T16:15:14.765401"
+    },
+    {
+      "date": "04 May",
+      "grand_prix": "Flag of United States of AmericaMiami",
+      "winner": "OscarPiastriPIA",
+      "scraped_at": "2025-08-27T16:15:14.765662"
+    },
+    {
+      "date": "18 May",
+      "grand_prix": "Flag of ItalyEmilia-Romagna",
+      "winner": "MaxVerstappenVER",
+      "scraped_at": "2025-08-27T16:15:14.765859"
+    },
+    {
+      "date": "25 May",
+      "grand_prix": "Flag of MonacoMonaco",
+      "winner": "LandoNorrisNOR",
+      "scraped_at": "2025-08-27T16:15:14.766021"
+    },
+    {
+      "date": "01 Jun",
+      "grand_prix": "Flag of SpainSpain",
+      "winner": "OscarPiastriPIA",
+      "scraped_at": "2025-08-27T16:15:14.766171"
+    },
+    {
+      "date": "15 Jun",
+      "grand_prix": "Flag of CanadaCanada",
+      "winner": "GeorgeRussellRUS",
+      "scraped_at": "2025-08-27T16:15:14.766318"
+    },
+    {
+      "date": "29 Jun",
+      "grand_prix": "Flag of AustriaAustria",
+      "winner": "LandoNorrisNOR",
+      "scraped_at": "2025-08-27T16:15:14.766460"
+    },
+    {
+      "date": "06 Jul",
+      "grand_prix": "Flag of Great BritainGreat Britain",
+      "winner": "LandoNorrisNOR",
+      "scraped_at": "2025-08-27T16:15:14.766600"
+    },
+    {
+      "date": "27 Jul",
+      "grand_prix": "Flag of BelgiumBelgium",
+      "winner": "OscarPiastriPIA",
+      "scraped_at": "2025-08-27T16:15:14.766737"
+    },
+    {
+      "date": "03 Aug",
+      "grand_prix": "Flag of HungaryHungary",
+      "winner": "LandoNorrisNOR",
+      "scraped_at": "2025-08-27T16:15:14.766875"
+    }
+  ]
+}
