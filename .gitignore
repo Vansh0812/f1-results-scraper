@@ -1,0 +1,224 @@
+# F1 Results Scraper - Git Ignore Configuration
+# ==============================================
+
+# Python
+# ------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+# --------------------
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+
+# PyCharm
+# -------
+.idea/
+*.swp
+*.swo
+
+# VS Code
+# -------
+.vscode/
+*.code-workspace
+
+# Jupyter Notebook
+# ----------------
+.ipynb_checkpoints
+
+# pyenv
+# -----
+.python-version
+
+# pipenv
+# ------
+Pipfile.lock
+
+# PEP 582
+# -------
+__pypackages__/
+
+# Celery
+# ------
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+# --------------------
+*.sage.py
+
+# Environments
+# ------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# mypy
+# ----
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+# -----------------
+.pyre/
+
+# pytype static type analyzer
+# ---------------------------
+.pytype/
+
+# Cython debug symbols
+# --------------------
+cython_debug/
+
+# Application Specific
+# --------------------
+
+# Output files
+output/
+data/
+results/
+*.csv
+*.json
+*.xlsx
+*.log
+
+# Debug files
+debug_*.html
+scraped_*.html
+
+# Backup files
+backup_*.tar.gz
+*.bak
+*.backup
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Configuration files (keep examples)
+.env
+config/local.yml
+config/production.yml
+secrets.yml
+
+# Docker
+# ------
+.dockerignore
+
+# Test coverage
+# -------------
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Logs
+# ----
+*.log
+logs/
+log/
+
+# OS generated files
+# ------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+# -------
+desktop.ini
+
+# Linux
+# -----
+*~
+
+# Archives
+# --------
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Documentation
+# -------------
+docs/_build/
+site/
+
+# Deployment
+# ----------
+ansible/inventory/production
+kubernetes/secrets/
+helm/values-production.yaml
+
+# Monitoring
+# ----------
+prometheus/data/
+grafana/data/
+
+# Cloud credentials
+# -----------------
+*.pem
+*.key
+service-account.json
+credentials.json
+
+# IDE files
+# ---------
+*.sublime-project
+*.sublime-workspace
+
+# Profiling
+# ---------
+*.prof
+*.pstats

@@ -1,0 +1,89 @@
+# F1 Results Scraper - Docker Compose Configuration
+# =================================================
+
+version: '3.8'
+
+services:
+  f1-scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: f1-results-scraper:latest
+    container_name: f1-scraper-app
+    
+    # Environment variables
+    environment:
+      - F1_DEFAULT_YEAR=2025
+      - F1_OUTPUT_DIR=/app/output
+      - F1_LOG_LEVEL=INFO
+      - F1_RATE_LIMIT=1.0
+    
+    # Volume mounts for persistent data
+    volumes:
+      - ./output:/app/output
+      - ./logs:/app/logs
+      - ./config:/app/config
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+    
+    # Restart policy
+    restart: unless-stopped
+    
+    # Network configuration
+    networks:
+      - f1-network
+    
+    # Command override for different years
+    # command: ["python", "f1_scraper_pro.py", "--year", "2024", "--summary"]
+
+  # Optional: Database service for storing results
+  f1-database:
+    image: postgres:15-alpine
+    container_name: f1-postgres-db
+    environment:
+      - POSTGRES_DB=f1_results
+      - POSTGRES_USER=f1user
+      - POSTGRES_PASSWORD=f1password
+    volumes:
+      - f1_db_data:/var/lib/postgresql/data
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - f1-network
+    restart: unless-stopped
+
+  # Optional: Web dashboard service
+  f1-dashboard:
+    build:
+      context: ./dashboard
+      dockerfile: Dockerfile
+    container_name: f1-dashboard-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - f1-database
+    environment:
+      - DATABASE_URL=postgresql://f1user:f1password@f1-database:5432/f1_results
+    networks:
+      - f1-network
+    restart: unless-stopped
+
+# Networks
+networks:
+  f1-network:
+    driver: bridge
+    name: f1-scraper-network
+
+# Volumes
+volumes:
+  f1_db_data:
+    name: f1-database-data

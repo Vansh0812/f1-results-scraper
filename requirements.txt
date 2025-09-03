@@ -1,0 +1,27 @@
+# F1 Results Scraper - Python Dependencies
+# ==========================================
+
+# Core scraping dependencies
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Data handling
+pandas>=2.0.0
+openpyxl>=3.1.0
+
+# Network and SSL
+urllib3>=2.0.0
+certifi>=2023.7.22
+
+# Development dependencies (optional)
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.7.0
+flake8>=6.0.0
+mypy>=1.5.0
+
+# Optional: For advanced features
+click>=8.1.0
+python-dotenv>=1.0.0
+rich>=13.5.0
