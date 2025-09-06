@@ -1,27 +1,16 @@
-# F1 Results Scraper - Python Dependencies
-# ==========================================
+# F1 Results Scraper - Minimal Dependencies for CI/CD
+# ====================================================
 
 # Core scraping dependencies
-requests>=2.31.0
-beautifulsoup4>=4.12.0
-lxml>=4.9.0
-
-# Data handling
-pandas>=2.0.0
-openpyxl>=3.1.0
+requests>=2.28.0,<3.0.0
+beautifulsoup4>=4.11.0,<5.0.0
+lxml>=4.9.0,<5.0.0
 
 # Network and SSL
-urllib3>=2.0.0
-certifi>=2023.7.22
+urllib3>=1.26.0,<3.0.0
+certifi>=2022.12.7
 
-# Development dependencies (optional)
-pytest>=7.4.0
-pytest-cov>=4.1.0
-black>=23.7.0
-flake8>=6.0.0
-mypy>=1.5.0
-
-# Optional: For advanced features
-click>=8.1.0
-python-dotenv>=1.0.0
-rich>=13.5.0
+# Development dependencies (optional for CI)
+pytest>=7.0.0,<8.0.0
+black>=22.0.0,<25.0.0
+flake8>=5.0.0,<7.0.0
