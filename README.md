@@ -1,4 +1,48 @@
-# F1 Results Scraper Professional 🏎️
+## API Reference
+
+### Class: F1ResultsScraperPro
+
+#### Constructor
+```python
+F1ResultsScraperPro(
+    year: int = 2025,
+    output_dir: str = "output",
+    log_level: str = "INFO",
+    rate_limit: float = 1.0
+)
+```
+
+#### Methods
+
+| Method | Description | Returns |
+|--------|-------------|---------|
+| `scrape()` | Main scraping method | `bool` |
+| `get_results()` | Get scraped results | `List[Dict]` |
+| `get_summary()` | Get statistics summary | `Dict` |
+| `validate_results()` | Validate scraped data | `Tuple[bool, List[str]]` |
+| `save_to_csv(filename)` | Save results to CSV | `bool` |
+| `save_to_json(filename)` | Save results to JSON | `bool` |
+
+### Data Models
+
+#### RaceResult
+```python
+@dataclass
+class RaceResult:
+    date: str
+    grand_prix: str
+    winner: str
+    car: str = ""
+    time: str = ""
+    scraped_at: str = ""
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit changes: `git commit -m 'Add amazing feature'`
+4. Push to branch: `git push# F1 Results Scraper Professional 🏎️
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

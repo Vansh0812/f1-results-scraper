@@ -1,48 +1,67 @@
-# F1 Results Scraper - Project Structure 📁
+# F1 Results Scraper - Project Structure
 
-This document outlines the complete project structure for the professional F1 Results Scraper.
+This document outlines the actual project structure for the professional F1 Results Scraper based on the current repository.
 
-## 📂 Directory Structure
+## Current Directory Structure
 
 ```
 f1-results-scraper/
-├── 📄 README.md                     # Main project documentation
-├── 📄 LICENSE                       # MIT License
-├── 📄 requirements.txt              # Python dependencies
-├── 📄 setup.py                      # Package setup configuration
-├── 📄 Dockerfile                    # Docker container configuration
-├── 📄 docker-compose.yml            # Docker Compose services
-├── 📄 Makefile                      # Development automation
-├── 📄 .env.example                  # Environment variables template
-├── 📄 .gitignore                    # Git ignore rules
-├── 📄 PROJECT_STRUCTURE.md          # This file
+├── README.md                         # Main project documentation
+├── LICENSE                           # MIT License
+├── requirements.txt                  # Python dependencies
+├── setup.py                         # Package setup configuration
+├── Dockerfile                       # Docker container configuration  
+├── docker-compose.yml               # Docker Compose services
+├── Makefile                         # Development automation
+├── .env.example                     # Environment variables template
+├── .gitignore                       # Git ignore rules
+├── PROJECT_STRUCTURE.md             # This file
 │
-├── 📄 f1_scraper_pro.py             # Main scraper application
+├── f1_scraper_pro.py                # Main scraper application
+├── troubleshoot.py                  # Diagnostic and troubleshooting script
 │
-├── 📁 .github/                      # GitHub Actions & templates
-│   └── 📁 workflows/
-│       ├── 📄 ci.yml                # CI/CD pipeline
-│       ├── 📄 deploy.yml            # Deployment workflow
-│       └── 📄 security.yml          # Security scanning
+├── .github/                         # GitHub Actions & workflows
+│   └── workflows/
+│       ├── ci.yml                   # Main CI/CD pipeline
+│       └── debug.yml                # Debug workflow for troubleshooting
 │
-├── 📁 tests/                        # Test suite
-│   ├── 📄 __init__.py
-│   ├── 📄 test_f1_scraper.py        # Main test file
-│   ├── 📄 test_data_models.py       # Data model tests
-│   ├── 📄 test_cli.py               # CLI tests
-│   └── 📁 fixtures/                 # Test data fixtures
-│       ├── 📄 sample_html.html
-│       └── 📄 test_data.json
-│
-├── 📁 config/                       # Configuration files
-│   ├── 📄 development.yml           # Development settings
-│   ├── 📄 production.yml            # Production settings
-│   └── 📄 logging.yml               # Logging configuration
-│
-├── 📁 output/                       # Generated output files
-│   ├── 📄 f1_2025_results.csv       # CSV results
-│   ├── 📄 f1_2025_results.json      # JSON results
-│   ├── 📄 f1_scraper_2025.log       # Application logs
+└── tests/                           # Test suite directory
+    └── test_f1_scraper.py           # Main test file
+```
+
+## Core Files Description
+
+### Main Application Files
+
+| File | Purpose | Status | Description |
+|------|---------|--------|-------------|
+| `f1_scraper_pro.py` | Main Application | ✅ Active | Enhanced F1 scraper with professional features |
+| `troubleshoot.py` | Diagnostics | ✅ Active | Troubleshooting and system diagnostics |
+| `requirements.txt` | Dependencies | ✅ Active | Python package dependencies |
+
+### Configuration Files
+
+| File | Purpose | Status | Description |
+|------|---------|--------|-------------|
+| `.env.example` | Environment Template | ✅ Active | Template for environment variables |
+| `setup.py` | Package Setup | ✅ Active | Package configuration for PyPI |
+| `.gitignore` | Git Configuration | ✅ Active | Git ignore rules |
+
+### Docker & Deployment
+
+| File | Purpose | Status | Description |
+|------|---------|--------|-------------|
+| `Dockerfile` | Container Build | ✅ Working | Docker container configuration |
+| `docker-compose.yml` | Service Orchestration | ✅ Available | Multi-service Docker setup |
+| `Makefile` | Automation | ✅ Available | Development task automation |
+
+### CI/CD & Testing
+
+| File | Purpose | Status | Description |
+|------|---------|--------|-------------|
+| `.github/workflows/ci.yml` | CI/CD Pipeline | ✅ Active | Automated testing and deployment |
+| `.github/workflows/debug.yml` | Debug Workflow | ✅ Available | Manual debugging workflow |
+| `tests/test_f1_scraper.py` | Test Suite | ✅ Available | Comprehensive test coverage |f1_scraper_2025.log       # Application logs
 │   └── 📄 debug_page_2025.html      # Debug HTML (if needed)
 │
 ├── 📁 docs/                         # Documentation
@@ -119,7 +138,7 @@ f1-results-scraper/
 ### 1. Initial Setup
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/f1-results-scraper.git
+git clone https://github.com/Vansh0812/f1-results-scraper.git
 cd f1-results-scraper
 
 # Setup development environment
